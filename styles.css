@@ -10,8 +10,9 @@ svg {
 }
 
 .container {
-    text-align: center;
+    height: 100vh;
     display: grid;
+    grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 5fr;
     grid-template-areas: 
     "sidebar header"
@@ -57,7 +58,6 @@ svg {
 
 .header {
     grid-area: header;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-rows: 100px 100px;
     font-weight: bold;
@@ -99,7 +99,7 @@ svg {
     justify-items: center;
 }
 
-#little-profile {
+.little-profile {
     width: 48px;
 }
 
@@ -197,10 +197,94 @@ svg {
   color: rgba(0, 0, 0, .3);
 }
 
-
-
 .main-content {
-    background-color: lightgray;
+    background-color: #e5e7eb;
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 40px;
 }
 
+#project-header,
+#announcement-header,
+#trending-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#project-header {
+    grid-column: 1 / -1;
+}
+
+.project-container {
+    display: grid;
+    grid-template-rows: 24px repeat(auto-fill, minmax(200px, 240px));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    background-color: #FFFFFF;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border-left: 8px solid #3b82f6;
+    display: grid;
+}
+
+.project-button {
+    align-self: end;
+    justify-self: end;
+}
+
+.project-button svg {
+    margin: 0px 8px;
+}
+
+.project-title,
+.announcement-title,
+.username {
+    font-weight: bold;
+}
+
+.project-desc,
+.announcement-desc,
+.user-desc {
+    font-size: 12px;
+}
+
+.side-content {
+    display: grid;
+    gap: 20px;
+}
+
+.announcement-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.trending-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 8px;
+}
+
+.sidebar svg,
+.logo-name,
+.sidebar-menu,
+.header svg,
+.little-profile,
+#little-name,
+.project-title,
+.project-card svg,
+.username {
+    cursor: pointer;
+}
