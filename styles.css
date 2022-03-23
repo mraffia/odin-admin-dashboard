@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+svg {
+    width: 24px;
+    height: 24px;
+}
+
 .container {
     text-align: center;
     display: grid;
@@ -14,13 +19,47 @@ body {
 }
 
 .sidebar {
-    background-color: lightblue;
+    background-color: #0ea5e9;
+    color: white;
+    padding: 20px;
     grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 240px 120px;
+    gap: 50px;
+    font-weight: bold;
+}
+
+.sidebar-logo,
+.sidebar-menu-main,
+.sidebar-menu-settings {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-name {
+    font-size: 24px;
+    justify-self: start;
+}
+
+.sidebar-menu {
+    justify-self: start;
+    font-size: 18px;
 }
 
 .header {
     grid-area: header;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-rows: 100px 150px;
 }
 
 .main-content {
