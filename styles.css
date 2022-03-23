@@ -40,11 +40,6 @@ svg {
     justify-items: center;
 }
 
-.logo {
-    width: 40px;
-    height: 40px;
-}
-
 .logo-name {
     font-size: 24px;
     justify-self: start;
@@ -55,14 +50,157 @@ svg {
     font-size: 18px;
 }
 
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
 .header {
     grid-area: header;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     display: grid;
-    grid-template-rows: 100px 150px;
+    grid-template-rows: 100px 100px;
+    font-weight: bold;
 }
+
+.header-top {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 16px;
+}
+
+#search-icon {
+    justify-self: end;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+}
+
+#search-bar {
+    border-radius: 12px;
+    justify-self: start;
+    width: 85%;
+    height: 32px;
+    padding: 8px;
+    background-color: lightgray;
+    border: 0;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+}
+
+#little-profile {
+    width: 48px;
+}
+
+#little-name {
+    justify-self: start;
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr;
+    gap: 16px;
+}
+
+.greeting-container {
+    display: grid;
+    grid-template-rows: 3fr 4sfr;
+    gap: 8px;
+    justify-items: start;
+}
+
+#greeting {
+    align-self: end;
+}
+
+#big-name {
+    font-size: 24px;
+}
+
+#big-profile {
+    width: 60px;
+    align-self: center;
+    justify-self: end;
+}
+
+.header-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+}
+
+#new {
+    justify-self: end;
+}
+
+#share {
+    justify-self: start;
+}
+
+/* Source: https://getcssscan.com/css-buttons-examples */
+.header-button {
+  align-items: center;
+  background-color: #0ea5e9;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.header-button:hover,
+.header-button:focus { 
+  background-color: #0369a1;
+  color: #ffffff;
+}
+
+.header-button:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.header-button:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+
 
 .main-content {
     background-color: lightgray;
     grid-area: main-content;
 }
+
